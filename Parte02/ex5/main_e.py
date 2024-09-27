@@ -10,25 +10,18 @@ def countNumbersUpto(stop_char):
         print(f"\nRead: {key}", end="")
 
 
+    otherInputs = []
     numericInputs = []
-    otherInputs = {}
 
-    for inputID in range(0, len(inputs)):
-        
-        input = inputs[inputID]
 
-        if (input.isnumeric()):
-            numericInputs.append(int(input))
-        else:
-            otherInputs[inputID] = input
+    [numericInputs.append(inp) if inp.isnumeric() else otherInputs.append(inp) for inp in inputs ]
+
 
     print(", stopping\n")
     print('You entered ' + str(len(numericInputs)) + ' numbers.')
-    print('You entered ' + str(len(otherInputs.items())) + ' others.')
-    numericInputs.sort()
-    print(otherInputs)
+    print('You entered ' + str(len(otherInputs)) + ' others.')
     print(numericInputs)
-
+    print(otherInputs)
 
 def main():
     key = readkey()
