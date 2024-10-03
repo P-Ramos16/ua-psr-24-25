@@ -25,8 +25,12 @@ def countNumbersUpto(stop_char):
     print(", stopping\n")
     print('You entered ' + str(len(numericInputs)) + ' numbers.')
     print('You entered ' + str(len(otherInputs.items())) + ' others.')
+    
+    for rank, value in otherInputs.items():
+        print(f"Key {value} with order {rank}")
+
+    print(numericInputs)
     numericInputs.sort()
-    print(otherInputs)
     print(numericInputs)
 
 
