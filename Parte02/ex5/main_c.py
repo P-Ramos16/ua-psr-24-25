@@ -29,8 +29,10 @@ def countNumbersUpto(stop_char):
 
 
 def main():
+    print("Press a key: ", end="", flush=True)
     key = readkey()
-    print(f"Read to: {key}")
+    print(key)
+    print(f"\nReading until '{key}' is pressed")
     countNumbersUpto(key)
 
 if __name__ == '__main__':

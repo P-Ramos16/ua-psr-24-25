@@ -10,8 +10,10 @@ def readAllUpTo(stop_char):
     print(", stopping")
 
 def main():
+    print("Press a key: ", end="", flush=True)
     key = readkey()
-    print(f"Read to: {key}")
+    print(key)
+    print(f"\nReading until '{key}' is pressed")
     readAllUpTo(key)
 
 if __name__ == '__main__':
