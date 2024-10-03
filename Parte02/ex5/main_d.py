@@ -30,8 +30,7 @@ def countNumbersUpto(stop_char):
         print(f"Key {value} with order {rank}")
 
     print(numericInputs)
-    numericInputs.sort()
-    print(numericInputs)
+    print(sorted(numericInputs))
 
 
 def main():
